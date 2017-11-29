@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<title>Crystal Game</title>
+</head>
+
+<body>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1>Crystal game!</h1>
+			<p class="tagline">Can you figure out the San Francisco brewery?!</p>
+		</div>
+	</div>
+
+
+
+<img src="http://www.agta.org/gemstones/images/ruby.jpg" alt="ruby" id="ruby" class="crystal"> 
+<button>Hello</button>
+
+
+<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("#ruby").attr("pointValue", "ruby");
+			// $("#ruby").val("ruby");
+		});
+			
+	});
+	
+</script>
+
+</body>
+</html>
