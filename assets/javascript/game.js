@@ -24,17 +24,31 @@ $(document).ready(function(){
 	// this is the function that goes when a crystal is clicked
 	$(".crystal").on("click",function(){
 		// assigns the point value of the crystal to dummy variable
-		var thisCrystalPoint = $(this).attr("pointValue");
+		var thisCrystalPoint = $(this).attr("pointValue"); // needs to be accessed through the attr(), not dot or []
 		// makes sure the pointvalue is parsed as an integer
 		thisCrystalPoint = parseInt(thisCrystalPoint);
-		// adds the crystal value to the playerpoints
+		// adds the crystal value to the playerPoints
 		playerPoints += thisCrystalPoint;
 		// updates the player score in DOM
 		$("#playerPoints").html(playerPoints);
-		// console.log("thisCrystalPoint", thisCrystalPoint);
-		// console.log("playerPoints", playerPoints);
 
-		// console.log($(this)[0][outerHTML]);
+		if (playerPoints === targetPoints) {
+			console.log("you win!");
+			numWins += 1;
+			$("#numWins").text(numWins);
+			resetGame();
+			console.log("numWins", numWins);
+
+		} else if (playerPoints > targetPoints) {
+			console.log("You lose!");
+			numLosses += 1;
+			$("#numLosses").text(numLosses);
+			console.log("numLosses", numLosses);
+			resetGame();
+		} else {
+			console.log("keep going!")
+		}
+
 	})
 
 	resetGame();
