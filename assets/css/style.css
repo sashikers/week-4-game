@@ -32,7 +32,8 @@ p {
 	height: 100px;
 	width: 200px;
 	background-color: red;
-	margin: 10px 10px 0px 20px;
+	margin: 10px 15px 0px 10px;
+	float: right;
 }
 
 h4 {
@@ -42,4 +43,10 @@ h4 {
 
 h5 {
 	text-align: center;
+}
+
+#targetPoints, #playerPoints {
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.1em; 
 }
