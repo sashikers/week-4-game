@@ -5,24 +5,34 @@ var targetPoints = 0;
 var playerPoints = 0;
 
 $(document).ready(function(){
+	// this function sets up the basic stage 1 of gameplay
 	var resetGame= function() {
+		// resets the player points to 0
 		playerPoints = 0;
+		// displays the player points to DOM
 		$("#playerPoints").text(playerPoints);
+		// sets the target at random number from 1 to 120
 		targetPoints = Math.floor(Math.random()*120)+20;
+		// displays the target points to DOM
 		$("#targetPoints").text(targetPoints);
+		// assigns a random value to each crystal between 1 and 12
 		$(".crystal").each(function(){
 			$(this).attr("pointValue", Math.floor(Math.random()*12)+1);
 		})
 
 	}
-
+	// this is the function that goes when a crystal is clicked
 	$(".crystal").on("click",function(){
+		// assigns the point value of the crystal to dummy variable
 		var thisCrystalPoint = $(this).attr("pointValue");
+		// makes sure the pointvalue is parsed as an integer
 		thisCrystalPoint = parseInt(thisCrystalPoint);
+		// adds the crystal value to the playerpoints
 		playerPoints += thisCrystalPoint;
+		// updates the player score in DOM
 		$("#playerPoints").html(playerPoints);
-		console.log("thisCrystalPoint", thisCrystalPoint);
-		console.log("playerPoints", playerPoints);
+		// console.log("thisCrystalPoint", thisCrystalPoint);
+		// console.log("playerPoints", playerPoints);
 
 		// console.log($(this)[0][outerHTML]);
 	})
