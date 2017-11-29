@@ -1,10 +1,27 @@
 .crystal {
-	height: 100px;
-	width: 100px;
+	height: 90px;
+	width: 90px;
+	margin: 12px;
+	float: right;
+	border-style: solid;
+	border-width: 5px;
 }
 
 .jumbotron {
 	background-image: url("granite.jpg");
+}
+
+#ruby {
+	border-color: maroon;
+}
+#beryl {
+	border-color: darkolivegreen;
+}
+#sapphire {
+	border-color: navy;
+}
+#opal {
+	border-color: chocolate;
 }
 
 p {
