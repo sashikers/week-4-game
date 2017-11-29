@@ -2,3 +2,11 @@
 	height: 100px;
 	width: 100px;
 }
+
+.jumbotron {
+	background-image: url("granite.jpg");
+}
+
+p {
+	font-size: 0.9em;
+}
