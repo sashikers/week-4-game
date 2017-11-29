@@ -10,8 +10,22 @@ $(document).ready(function(){
 		$("#playerPoints").text(playerPoints);
 		targetPoints = Math.floor(Math.random()*120)+20;
 		$("#targetPoints").text(targetPoints);
-		console.log(targetPoints);
+		$(".crystal").each(function(){
+			$(this).attr("pointValue", Math.floor(Math.random()*12)+1);
+		})
+
 	}
+
+	$(".crystal").on("click",function(){
+		var thisCrystalPoint = $(this).attr("pointValue");
+		thisCrystalPoint = parseInt(thisCrystalPoint);
+		playerPoints += thisCrystalPoint;
+		$("#playerPoints").html(playerPoints);
+		console.log("thisCrystalPoint", thisCrystalPoint);
+		console.log("playerPoints", playerPoints);
+
+		// console.log($(this)[0][outerHTML]);
+	})
 
 	resetGame();
 })
