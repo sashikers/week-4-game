@@ -36,6 +36,7 @@ $(document).ready(function(){
 			console.log("you win!");
 			numWins += 1;
 			$("#numWins").text(numWins);
+			$("#alerts").text("You win this round!!")
 			resetGame();
 			console.log("numWins", numWins);
 
@@ -43,10 +44,12 @@ $(document).ready(function(){
 			console.log("You lose!");
 			numLosses += 1;
 			$("#numLosses").text(numLosses);
+			$("#alerts").html("Ha ha ha ha ha ha ha ha ha ha<br>Try again");
 			console.log("numLosses", numLosses);
 			resetGame();
 		} else {
 			console.log("keep going!")
+			$("#alerts").text("Keep going...");
 		}
 
 	})
