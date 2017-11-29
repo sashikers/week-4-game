@@ -27,3 +27,19 @@
 p {
 	font-size: 0.9em;
 }
+
+.box {
+	height: 100px;
+	width: 200px;
+	background-color: red;
+	margin: 10px 10px 0px 20px;
+}
+
+h4 {
+	padding: 8px;
+	text-align: center;
+}
+
+h5 {
+	text-align: center;
+}
